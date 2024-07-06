@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply font-poppins text-white m-0 p-0;
+}
+
+body {
+  @apply bg-primary-2;
+}
