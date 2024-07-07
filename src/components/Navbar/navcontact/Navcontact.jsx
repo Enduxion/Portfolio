@@ -44,7 +44,7 @@ const Navcontact = ({ showContact, closeContact }) => {
     initial={{ x: "100%", borderRadius: "100%" }}
     animate={{
       x: showContact ? 0 : "100%",
-      borderRadius: showContact ? 0 : "100%"
+      borderRadius: showContact ? 0 : "100%",
     }}
     transition={{ ease: "easeInOut", duration: 0.3 }}
   >
@@ -55,7 +55,7 @@ const Navcontact = ({ showContact, closeContact }) => {
       onClick={closeContact}
     >
       <IoClose
-        className="text-3xl fill-white"
+        className="text-3xl fill-white hover:scale-75 duration-300 mouse-affected"
       />
     </motion.div>
     <div className="w-full h-full flex flex-col justify-evenly items-center">

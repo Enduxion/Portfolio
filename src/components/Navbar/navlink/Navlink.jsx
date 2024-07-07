@@ -7,7 +7,7 @@ const Navlink = ({ contact, index, showContact }) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <motion.span
-      className="flex flex-row gap-2 items-center text-xl cursor-pointer p-2 rounded-xl"
+      className="flex flex-row gap-2 items-center text-xl cursor-pointer p-2 rounded-xl mouse-affected"
       onClick={() => window.open(contact.to, "_blank")}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}

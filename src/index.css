@@ -22,5 +22,8 @@
 }
 
 body {
-  @apply bg-primary-2;
+  @apply bg-primary-2 overflow-x-hidden;
+}
+.froboto > span {
+  @apply font-roboto;
 }

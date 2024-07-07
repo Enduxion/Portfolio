@@ -20,13 +20,13 @@ const Main = ({ routes, showNavbar, closeNavbar }) => {
         onClick={closeNavbar}
       >
         <IoClose
-          className="text-3xl fill-white hover:fill-primary-1 duration-300"
+          className="text-3xl fill-white hover:scale-75 duration-300 mouse-affected"
         />
       </motion.div>
       <div className="flex flex-col w-full h-full items-center justify-evenly">
         {routes.map((route, index) => (
           <motion.span
-            className="text-primary-2 text-xl uppercase tracking-widest font-bold flex"
+            className="text-primary-2 text-xl uppercase tracking-widest font-bold flex mouse-affected"
             key={route.path}
             animate={{ opacity: showNavbar ? 1 : 0, y: showNavbar ? 0 : -20 }}
             transition={{ delay: showNavbar ? 0.1 * index + 0.3 : 0, ease:"easeInOut" }}

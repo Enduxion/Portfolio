@@ -1,6 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+
 import Navbar from "./components/Navbar/Navbar";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Cursor from "./functions/Cursor/Cursor";
 
 const App = () => {
   const routes = [
@@ -12,22 +16,22 @@ const App = () => {
     {
       name: "about",
       path: "/about",
-      element: <></>,
+      element: <About />,
     },
     {
       name: "projects",
       path: "/projects",
-      element: <></>
+      element: <></>,
     },
     {
       name: "experience",
       path: "/experience",
-      element: <></>
+      element: <></>,
     },
     {
       name: "blog",
       path: "/blog",
-      element: <></>
+      element: <></>,
     },
     {
       name: "contact",
@@ -43,6 +47,7 @@ const App = () => {
           <Route path={route.path} element={route.element} key={route.path} />
         ))}
       </Routes>
+      <Cursor />
     </>
   );
 };
