@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import SVGControllers from "./components/SVGControllers/SVGControllers";
 
 const App = () => {
   const routes = [
@@ -13,6 +14,21 @@ const App = () => {
       name: "about",
       path: "/about",
       element: <></>,
+    },
+    {
+      name: "projects",
+      path: "/projects",
+      element: <></>
+    },
+    {
+      name: "experience",
+      path: "/experience",
+      element: <></>
+    },
+    {
+      name: "blog",
+      path: "/blog",
+      element: <></>
     },
     {
       name: "contact",
@@ -28,6 +44,7 @@ const App = () => {
           <Route path={route.path} element={route.element} key={route.path} />
         ))}
       </Routes>
+      <SVGControllers />
     </>
   );
 };

@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Public sans";
+  src: url("./assets/fonts/PublicSans.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./assets/fonts/Roboto.woff2");
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins.ttf");
+}
+
 * {
-  @apply font-poppins text-white m-0 p-0;
+  @apply font-poppins text-primary-3 m-0 p-0;
 }
 
 body {
