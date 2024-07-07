@@ -24,6 +24,16 @@
 body {
   @apply bg-primary-2 overflow-x-hidden;
 }
+
 .froboto > span {
   @apply font-roboto;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
