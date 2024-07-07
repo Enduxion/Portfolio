@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Main = ({ routes, showNavbar, closeNavbar }) => {
   return (
     <motion.div
-      className="w-2/3 max-h-screen h-screen bg-primary-1 fixed top-0 left-0 flex flex-col p-2 z-50"
+      className="w-1/5 max-h-screen h-screen bg-primary-1 fixed top-0 left-0 flex flex-col p-2 z-50"
       initial={{ x: "-100%", borderRadius: "100%" }}
       animate={{
         x: showNavbar ? 0 : "-100%",
@@ -26,7 +26,7 @@ const Main = ({ routes, showNavbar, closeNavbar }) => {
       <div className="flex flex-col w-full h-full items-center justify-evenly">
         {routes.map((route, index) => (
           <motion.span
-            className="text-primary-2 text-4xl uppercase tracking-widest font-bold flex"
+            className="text-primary-2 text-xl uppercase tracking-widest font-bold flex"
             key={route.path}
             animate={{ opacity: showNavbar ? 1 : 0, y: showNavbar ? 0 : -20 }}
             transition={{ delay: showNavbar ? 0.1 * index + 0.3 : 0, ease:"easeInOut" }}

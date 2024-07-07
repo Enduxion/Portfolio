@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import SVGControllers from "./components/SVGControllers/SVGControllers";
 
 const App = () => {
   const routes = [
