@@ -43,7 +43,6 @@ const App = () => {
           <Route path={route.path} element={route.element} key={route.path} />
         ))}
       </Routes>
-      <SVGControllers />
     </>
   );
 };
