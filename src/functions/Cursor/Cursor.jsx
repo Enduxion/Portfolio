@@ -51,7 +51,7 @@ const Cursor = () => {
         top: position.y,
         left: position.x,
         transform: "translate(-50%, -50%)",
-        borderRadius: `${affected ? "50%" : 0}`,
+        borderRadius: `${affected ? "50%" : twc.theme.borderRadius.md}`,
         width: `${affected ? 40 : 20}px`,
         backdropFilter: "blur(1px) hue-rotate(90deg)",
         aspectRatio: "1 / 1",

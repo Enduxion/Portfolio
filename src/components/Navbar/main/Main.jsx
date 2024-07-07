@@ -14,7 +14,7 @@ const Main = ({ routes, showNavbar, closeNavbar }) => {
       transition={{ ease: "easeInOut", duration: 0.3 }}
     >
       <motion.div 
-        className="cursor-pointer bg-secondary-2 rounded h-fit w-fit"
+        className="bg-secondary-2 rounded h-fit w-fit"
         animate={{ opacity: showNavbar ? 1 : 0, y: showNavbar ? 0 : -20 }}
         transition={{ delay: 0.3 }}
         onClick={closeNavbar}

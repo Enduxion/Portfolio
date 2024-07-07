@@ -21,7 +21,7 @@ const Navbar = ({ routes }) => {
             setShowNavbar(true);
             setShowContact(false);
           }}
-          className="h-fit cursor-pointer bg-gray-800 w-fit rounded p-1 flex items-center justify-center"
+          className="h-fit bg-gray-800 w-fit rounded p-1 flex items-center justify-center"
           animate={{ opacity: showNavbar ? 0 : 1, y: showNavbar ? -20 : 0 }}
           transition={{ delay: showNavbar ? 0 : 0.3 }}
         >
@@ -38,7 +38,7 @@ const Navbar = ({ routes }) => {
             setShowContact(true);
             setShowNavbar(false);
           }}
-          className="h-10 overflow-hidden cursor-pointer grayscale"
+          className="h-10 overflow-hidden grayscale"
           whileHover={{ scale: 1.1, filter: "grayscale(0)" }}
           transition={{ ease: "easeInOut", duration: 0.1 }}
         >

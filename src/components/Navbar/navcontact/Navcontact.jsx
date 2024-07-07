@@ -49,7 +49,7 @@ const Navcontact = ({ showContact, closeContact }) => {
     transition={{ ease: "easeInOut", duration: 0.3 }}
   >
     <motion.div 
-      className="cursor-pointer bg-secondary-2 rounded h-fit self-end"
+      className="bg-secondary-2 rounded h-fit self-end"
       animate={{ opacity: showContact ? 1 : 0, y: showContact ? 0 : -20 }}
       transition={{ delay: showContact ? 0.3 : 0 }}
       onClick={closeContact}
