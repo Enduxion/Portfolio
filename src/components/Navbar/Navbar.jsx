@@ -11,7 +11,7 @@ const Navbar = ({ routes }) => {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <nav className="p-2 items-center flex w-full h-14 fixed top-0 left-0">
+    <nav className="p-2 items-center flex w-full h-14 fixed top-0 left-0 z-50">
       <Main routes={routes} showNavbar={showNavbar} closeNavbar={() => setShowNavbar(false)} />
       <Navcontact showContact={showContact} closeContact={() => setShowContact(false)} />
       <div className="flex flex-row w-full items-center justify-between">

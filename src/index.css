@@ -37,3 +37,10 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+::-webkit-scrollbar {
+  @apply bg-black w-1;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white;
+}

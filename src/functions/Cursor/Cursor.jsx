@@ -47,7 +47,7 @@ const Cursor = () => {
     <motion.div
       style={{
         zIndex: 100,
-        position: "absolute",
+        position: "fixed",
         top: position.y,
         left: position.x,
         transform: "translate(-50%, -50%)",
