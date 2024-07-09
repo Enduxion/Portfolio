@@ -53,11 +53,11 @@ const Cursor = () => {
         transform: "translate(-50%, -50%)",
         borderRadius: `${affected ? "50%" : twc.theme.borderRadius.md}`,
         width: `${affected ? 40 : 20}px`,
-        backdropFilter: "blur(1px) hue-rotate(90deg)",
+        backgroundColor: twc.theme.colors.secondary[2],
         aspectRatio: "1 / 1",
         border: "2px solid " + twc.theme.colors.primary[1],
         pointerEvents: "none",
-        transition: "0.3s border-radius, 0.3s width",
+        transition: "0.1s border-radius, 0.1s width",
       }}
     ></motion.div>
   );

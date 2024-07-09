@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import twc from "../../../functions/twc";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 const Scrollwheel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,12 +17,20 @@ const Scrollwheel = () => {
     "Django developer"
   ];
   
-  const updateRotation = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % scrollData.length);
+  const updateRotation = (index) => {
+    if (index) { 
+      if (index === -1) {
+        setCurrentIndex((prevIndex) => (prevIndex - 1) % scrollData.length);
+      } else {
+        setCurrentIndex(index);
+      }
+    } else {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % scrollData.length);
+    }
   };
 
   useEffect(() => {
-    const interval = setInterval(updateRotation, 3000);
+    const interval = setInterval(() => updateRotation(null), 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -69,22 +77,26 @@ const Scrollwheel = () => {
               }}
               key={index}
             >
-              <span className="truncate"
+              <span className="truncate hover:text-secondary-2 text-primary-2 mouse-affected hover:scale-95"
                 style={{
                   position: "absolute",
                   width: "75%",
                   fontFamily: "Roboto Mono",
                   fontSize: "1.5rem",
-                  color: twc.theme.colors.primary[2],
                   textAlign: "center",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
                 }}
+                onClick={() => updateRotation(index)}
               >
                 {datum}
               </span>
             </motion.span>
           );
         })}
+      </div>
+      <div className="flex flex-col">
+        <button onClick={() => updateRotation(-1)}><FaAngleUp /></button>
+        <button onClick={() => updateRotation(null)}><FaAngleDown /></button>
       </div>
     </div>
   );

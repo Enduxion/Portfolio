@@ -9,12 +9,11 @@ const HomeAbout = () => {
       .get("/data/aboutData.json")
       .then((response) => {
         setAboutData(response.data);
-        console.log(response.data);
       })
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="flex mt-[100vh] flex-col w-full items-center gap-8 h-[calc(100vh-4rem)] bg-black z-10 border-t-2 border-t-primary-1">
+    <div className="section flex mt-[100vh] flex-col w-full items-center gap-8 h-[calc(100vh-4rem)] bg-black z-10 border-t-2 border-t-primary-1">
       <span className="text-6xl font-roboto">My Timeline</span>
       <div className="w-full flex flex-col items-center overflow-y-scroll hidden-scrollbar gap-4">
         {aboutData && aboutData.map((datum, index) => (
