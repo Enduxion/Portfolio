@@ -21,16 +21,6 @@ const App = () => {
       element: <></>,
     },
     {
-      name: "experience",
-      path: "/experience",
-      element: <></>,
-    },
-    {
-      name: "blog",
-      path: "/blog",
-      element: <></>,
-    },
-    {
       name: "contact",
       path: "/contact",
       element: <></>,
