@@ -1,10 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
-
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Cursor from "./functions/Cursor/Cursor";
 
 const App = () => {
   const routes = [
@@ -16,7 +13,7 @@ const App = () => {
     {
       name: "about",
       path: "/about",
-      element: <About />,
+      element: <></>,
     },
     {
       name: "projects",
@@ -47,7 +44,6 @@ const App = () => {
           <Route path={route.path} element={route.element} key={route.path} />
         ))}
       </Routes>
-      <Cursor />
     </>
   );
 };

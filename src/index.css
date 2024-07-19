@@ -18,7 +18,7 @@
 }
 
 * {
-  @apply font-poppins text-primary-3 m-0 p-0 cursor-none;
+  @apply font-poppins text-primary-3 m-0 p-0;
 }
 
 body {
