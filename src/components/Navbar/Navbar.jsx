@@ -28,8 +28,8 @@ const Navbar = ({ routes }) => {
   }, [index]);
 
   return (
-    <div className="nav w-full h-nav fixed top-0 left-0 border-b border-gray-800 px-4 py-2 flex flex-row items-center justify-between bg-opacity-80 bg-black backdrop-blur-sm z-50">
-      <Link to="/" className="text-2xl cursor-pointer text-primary-1 hover:text-primary-3 duration-300 hover:tracking-wide font-euro">
+    <div className="nav w-full h-nav fixed top-0 left-0 border-b border-gray-800 px-4 py-2 flex flex-row items-center justify-between bg-opacity-50 bg-black backdrop-blur-sm z-50">
+      <Link to="/" className="text-2xl cursor-pointer text-primary-1 hover:text-primary-3 duration-300 hover:tracking-wide font-euro tracking-widest">
         Endux
       </Link>
       <div className="flex flex-row gap-8">

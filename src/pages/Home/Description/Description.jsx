@@ -2,14 +2,36 @@ import { Link } from "react-router-dom";
 
 const Description = ({ routes }) => {
   const myNameArr = "Pawan Gurung".split("");
+  const socialArr = [
+    {
+      name: "Github",
+      link: "https://www.github.com/Enduxion/",
+      icon: "fab fa-github",
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/enduxion/",
+      icon: "fab fa-instagram",
+    },
+    {
+      name: "Facebook",
+      link: "https://www.facebook.com/enduxion/",
+      icon: "fab fa-facebook",
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/pawan-gurung/",
+      icon: "fab fa-linkedin",
+    },
+  ];
   return (
-    <div className="flex flex-col tracking-widest gap-8 justify-center h-full w-1/2">
+    <div className="flex flex-col tracking-widest gap-8 justify-evenly h-full w-1/2">
       <div className="">
-        <span className="il-slide flex text-3xl font-extrabold drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] cursor-pointer">
+        <span className="il-slide flex text-3xl font-extrabold drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] cursor-pointer w-fit">
           {myNameArr.map((letter, idx) => (
             <span
               key={idx}
-              className={`duration-100 text-primary-4 ${
+              className={`duration-100 text-primary-4 hover:text-primary-3 ${
                 letter === " " && "m-1"
               }`}
               onMouseEnter={(e) => {
@@ -32,7 +54,7 @@ const Description = ({ routes }) => {
           <Link
             key={idx}
             to={route.path}
-            className="il-slide gap-1 flex items-baseline text-primary-4 hover:brightness-150 duration-75 transition-[filter]"
+            className="il-slide gap-1 flex items-baseline text-primary-4 hover:brightness-150 duration-75 transition-[filter_gap] hover:gap-2"
           >
             <i className="fas fa-angle-right text-[10px] text-primary-4"></i>
             {route.name}
@@ -40,6 +62,21 @@ const Description = ({ routes }) => {
           </Link>
         ))}
       </span>
+      <div className="flex justify-self-end gap-2 flex-col">
+        <span className="il-slide">Social media links</span>
+        <span className="flex flex-row gap-4">
+          {socialArr.map((social, idx) => (
+            <Link
+              key={idx}
+              to={social.link}
+              className="il-slide flex gap-2 text-primary-4 w-fit items-center hover:brightness-150 duration-75 transition-[filter]"
+            >
+              <i className={social.icon + " text-primary-4"}></i>
+              {social.name}
+            </Link>
+          ))}
+        </span>
+      </div>
     </div>
   );
 };

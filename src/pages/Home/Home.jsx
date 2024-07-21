@@ -3,7 +3,6 @@ import bgVid from "../../assets/videos/bg.mp4";
 import gsap from "gsap";
 import Description from "./Description/Description";
 import DescriptionR from "./DescriptionR/DescriptionR.jsx";
-
 const Home = ({ routes }) => {
   const tml = gsap.timeline({});
   useGSAP(() => {
@@ -28,7 +27,7 @@ const Home = ({ routes }) => {
   return (
     <div className="mt-nav py-8 section relative flex flex-row h-anav">
       <video
-        className="w-full h-full overflow-visible object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10"
+        className="w-full h-full overflow-visible object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10 opacity-20"
         id="bgVid"
         autoPlay
         loop
