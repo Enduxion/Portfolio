@@ -26,7 +26,7 @@ const Description = ({ routes }) => {
   ];
   return (
     <div className="flex flex-col gap-8 justify-evenly h-full w-1/2">
-      <div className="">
+      <div className="flex flex-col">
         <span className="il-slide flex text-3xl font-extrabold drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] cursor-pointer w-fit">
           {myNameArr.map((letter, idx) => (
             <span
@@ -48,6 +48,13 @@ const Description = ({ routes }) => {
         <span className="text-primary-4 il-slide flex">
           Programmer and Mathematics Enthusiast
         </span>
+        <Link
+          to="/cv.pdf"
+          className="il-slide bg-primary-2 text-primary-1 mt-2 px-3 gap-2 flex border-2 items-center justify-center py-1 rounded-md w-fit border-primary-1 hover:bg-primary-1/90 hover:text-primary-2 duration-100"
+        >
+          <i className="far fa-file text-inherit text-sm"></i>
+          My CV
+        </Link>
       </div>
       <span className="flex flex-col w-fit">
         {routes.map((route, idx) => (
