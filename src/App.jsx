@@ -8,22 +8,26 @@ const App = () => {
     {
       name: "home",
       path: "/",
-      element: <Home />,
+      element: Home,
+      desc: "the main page"
     },
     {
       name: "about",
       path: "/about",
-      element: <></>,
+      element: Home,
+      desc: "a little about me"
     },
     {
       name: "projects",
       path: "/projects",
-      element: <></>,
+      element: Home,
+      desc: "some of my projects"
     },
     {
       name: "contact",
       path: "/contact",
-      element: <></>,
+      element: Home,
+      desc: "get in touch with me"
     },
   ];
   return (
@@ -31,7 +35,7 @@ const App = () => {
       <Navbar routes={routes} />
       <Routes>
         {routes.map((route) => (
-          <Route path={route.path} element={route.element} key={route.path} />
+          <Route path={route.path} element={<route.element routes={routes} />} key={route.path} />
         ))}
       </Routes>
     </>

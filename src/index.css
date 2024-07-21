@@ -53,3 +53,6 @@ body {
 .section {
   @apply px-4;
 }
+.comment {
+  @apply text-primary-5;
+}

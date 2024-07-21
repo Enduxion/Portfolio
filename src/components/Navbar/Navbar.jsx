@@ -8,29 +8,29 @@ const Navbar = ({ routes }) => {
   const tml = gsap.timeline({});
 
   useGSAP(() => {
-    tml.from(".nav", { y: "-100%", opacity: 0, duration: 0.3 })
+    tml.from(".nav", { y: "-100%", opacity: 0, duration: 1 })
   }, []);
 
   useGSAP(() => {
     if (index !== -1) {
       gsap.to(".animate-text", {
         opacity: 0.4,
-        duration: 0.3,
+        duration: 0.075,
         ease: "power1.out",
       })
     } else {
       gsap.to(".animate-text", {
         opacity: 1,
-        duration: 0.3,
+        duration: 0.075,
         ease: "power1.out",
       })
     }
   }, [index]);
 
   return (
-    <div className="nav w-full h-nav fixed top-0 left-0 border-b border-gray-800 px-4 py-2 flex flex-row items-center justify-between bg-black bg-opacity-50 backdrop-blur-sm">
-      <Link to="/" className="text-2xl cursor-pointer text-primary-1 hover:text-primary-3 duration-300 hover:tracking-wide font-roboto">
-        pawan
+    <div className="nav w-full h-nav fixed top-0 left-0 border-b border-gray-800 px-4 py-2 flex flex-row items-center justify-between bg-opacity-80 bg-black backdrop-blur-sm z-50">
+      <Link to="/" className="text-2xl cursor-pointer text-primary-1 hover:text-primary-3 duration-300 hover:tracking-wide font-euro">
+        Endux
       </Link>
       <div className="flex flex-row gap-8">
         {routes.map((route, idx) => (
