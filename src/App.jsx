@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 const App = () => {
   const routes = [
@@ -14,7 +15,7 @@ const App = () => {
     {
       name: "about",
       path: "/about",
-      element: Home,
+      element: About,
       desc: "a little about me"
     },
     {

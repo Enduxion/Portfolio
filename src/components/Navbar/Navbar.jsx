@@ -5,11 +5,6 @@ import gsap from "gsap";
 
 const Navbar = ({ routes }) => {
   const [index, setIndex] = useState(-1);
-  const tml = gsap.timeline({});
-
-  useGSAP(() => {
-    tml.from(".nav", { y: "-100%", opacity: 0, duration: 1 })
-  }, []);
 
   useGSAP(() => {
     if (index !== -1) {

@@ -25,7 +25,7 @@ const Description = ({ routes }) => {
     },
   ];
   return (
-    <div className="flex flex-col tracking-widest gap-8 justify-evenly h-full w-1/2">
+    <div className="flex flex-col gap-8 justify-evenly h-full w-1/2">
       <div className="">
         <span className="il-slide flex text-3xl font-extrabold drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] cursor-pointer w-fit">
           {myNameArr.map((letter, idx) => (

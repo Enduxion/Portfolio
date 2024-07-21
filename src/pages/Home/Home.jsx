@@ -1,15 +1,17 @@
+// import Transition from "../../functions/Transition.jsx";
 import { useGSAP } from "@gsap/react";
 import bgVid from "../../assets/videos/bg.mp4";
 import gsap from "gsap";
 import Description from "./Description/Description";
 import DescriptionR from "./DescriptionR/DescriptionR.jsx";
+import Transition from "../../functions/Transition.jsx";
 const Home = ({ routes }) => {
   const tml = gsap.timeline({});
   useGSAP(() => {
     // Animate the video
     tml.from(
       ".bgVid",
-      { opacity: 0, delay: 1, duration: 0.6, ease: "circ.inOut" }
+      { opacity: 0, duration: 0.6, ease: "circ.inOut" }
     );
     // Animate the text il slide
     tml.fromTo(
@@ -25,7 +27,7 @@ const Home = ({ routes }) => {
     );
   }, []);
   return (
-    <div className="mt-nav py-8 section relative flex flex-row h-anav">
+    <div className="py-8 section relative flex flex-row">
       <video
         className="w-full h-full overflow-visible object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10 opacity-20"
         id="bgVid"
@@ -42,4 +44,4 @@ const Home = ({ routes }) => {
   );
 };
 
-export default Home;
+export default Transition(Home);

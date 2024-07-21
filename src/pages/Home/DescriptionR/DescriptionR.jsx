@@ -7,7 +7,7 @@ const DescriptionR = () => {
     { name: "Chess using C++ & SFML", path:"https://www.github.com/Enduxion/Chess.git" },
   ];
   return (
-    <div className="flex flex-col tracking-widest justify-between items-end text-right h-full w-1/2">
+    <div className="flex flex-col justify-between items-end text-right h-full w-1/2">
       <span className="flex flex-col">
         <span className="il-rslide flex justify-end">My Skills</span>
         {perks.map((perk, idx) => (
