@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: "Eurostile";
+  src: url("./assets/fonts/eurostile.ttf");
+}
+
+@font-face {
   font-family: "Roboto Mono";
   src: url("./assets/fonts/Roboto.woff2");
 }
@@ -18,7 +23,7 @@
 }
 
 * {
-  @apply font-poppins text-primary-3 m-0 p-0;
+  @apply font-euro text-primary-1 m-0 p-0;
 }
 
 body {
@@ -43,4 +48,8 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   @apply bg-white;
+}
+
+.section {
+  @apply px-4;
 }

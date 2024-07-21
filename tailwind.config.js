@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-const GOLD_COLOR = "#f0e2a3";
-const DARK_GOLD_COLOR = "#b2a879";
-const BLACK_COLOR = "#000";
-const WHITE_COLOR = "#fff";
-const RED_COLOR = "#f02e3a";
+export const GOLD_COLOR = "#f0e2a3";
+export const DARK_GOLD_COLOR = "#b2a879";
+export const ACCENT_GRAY = "#c0c0c0";
+export const BLACK_COLOR = "#000";
+export const WHITE_COLOR = "#fff";
+export const RED_COLOR = "#f02e3a";
+
+export const NAV_HEIGHT = 3.5; // in rem
 
 export default {
   content: [
@@ -15,19 +18,26 @@ export default {
     extend: {
       colors: {
         primary: {
-          1: GOLD_COLOR,
+          1: WHITE_COLOR,
           2: BLACK_COLOR,
-          3: WHITE_COLOR,
+          3: GOLD_COLOR,
+          4: ACCENT_GRAY,
+          5: DARK_GOLD_COLOR,
+          6: RED_COLOR,
         },
-        secondary: {
-          1: RED_COLOR,
-          2: DARK_GOLD_COLOR,
-        }
       },
       fontFamily: {
         poppins: "poppins",
         public: "Public sans",
         roboto: "Roboto Mono",
+        euro: "Eurostile",
+      },
+      height: {
+        nav: `${NAV_HEIGHT}rem`,
+        anav: `calc(100vh - ${NAV_HEIGHT}rem)`,
+      },
+      margin: {
+        nav: `${NAV_HEIGHT}rem`
       },
     },
   },
