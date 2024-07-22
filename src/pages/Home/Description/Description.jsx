@@ -1,29 +1,8 @@
 import { Link } from "react-router-dom";
+import { socialArr } from "../../../resources/utils";
 
 const Description = ({ routes }) => {
   const myNameArr = "Pawan Gurung".split("");
-  const socialArr = [
-    {
-      name: "Github",
-      link: "https://www.github.com/Enduxion/",
-      icon: "fab fa-github",
-    },
-    {
-      name: "Instagram",
-      link: "https://www.instagram.com/enduxion/",
-      icon: "fab fa-instagram",
-    },
-    {
-      name: "Facebook",
-      link: "https://www.facebook.com/enduxion/",
-      icon: "fab fa-facebook",
-    },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/pawan-gurung/",
-      icon: "fab fa-linkedin",
-    },
-  ];
   return (
     <div className="flex flex-col gap-8 justify-evenly h-full w-1/2">
       <div className="flex flex-col">
@@ -46,7 +25,7 @@ const Description = ({ routes }) => {
           ))}
         </span>
         <span className="text-primary-4 il-slide flex">
-          Programmer and Mathematics Enthusiast
+          Experienced Web Developer and Mathematics Enthusiast
         </span>
         <Link
           to="/cv.pdf"

@@ -1,13 +1,18 @@
-import Transition from "../../functions/Transition";
-import pfpImg from "../../assets/images/pfp2.png";
-import bgVid from "../../assets/videos/bga.mp4";
-import bgAud from "../../assets/audio/bga.mp3";
+import { useRef } from "react";
 
-// Music by <a href="https://pixabay.com/users/william_king-33448498/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=144998">William_King</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=144998">Pixabay</a>
+import Transition from "../../functions/Transition";
+import { bga, bgAud, pfpImg } from "../../resources/utils";
+
+import Education from "./Education/Education";
+import Intro from "./Intro/Intro";
+import Skills from "./Skills/Skills";
+import Contact from "./Contact/Contact";
+import Attribution from "./Attribution/Attribution";
 
 const About = () => {
+  const musicRef = useRef(null);
   return (
-    <div className="section flex p-4">
+    <div className="section flex p-4 overflow-hidden relative">
       <video
         className="w-full h-screen object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10 opacity-40"
         id="bgVid"
@@ -16,11 +21,29 @@ const About = () => {
         muted
         playsInline
       >
-        <source src={bgVid} type="video/mp4" />
+        <source src={bga} type="video/mp4" />
       </video>
-      <audio className="absolute top-0 left-0 hidden" autoPlay loop src={bgAud} />
-      <div className="w-full">
-        
+      <audio
+        ref={musicRef}
+        className="absolute top-0 left-0 hidden"
+        loop
+        src={bgAud}
+      />
+      <div className="w-1/2 h-full flex flex-col gap-4">
+        <Intro />
+        <Education />
+      </div>
+      <div className="w-1/2 h-full flex flex-col text-right gap-4">
+        <div className="w-full h-1/3 flex items-center justify-end">
+          <Attribution musicRef={musicRef} />
+          <img
+            className="h-full rounded-full w-fit border-2 border-gray-800 saturate-0 hover:saturate-100 cursor-pointer hover:scale-105 duration-100"
+            src={pfpImg}
+            alt="A picture of myself"
+          />
+        </div>
+        <Skills />
+        <Contact />
       </div>
     </div>
   );

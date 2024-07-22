@@ -10,10 +10,7 @@ export const RED_COLOR = "#f02e3a";
 export const NAV_HEIGHT = 3.5; // in rem
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -37,10 +34,9 @@ export default {
         anav: `calc(100vh - ${NAV_HEIGHT}rem)`,
       },
       margin: {
-        nav: `${NAV_HEIGHT}rem`
+        nav: `${NAV_HEIGHT}rem`,
       },
     },
   },
   plugins: [],
-}
-
+};
