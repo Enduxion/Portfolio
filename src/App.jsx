@@ -6,6 +6,7 @@ import Animations from "./functions/Animations";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import Projects from "./pages/Projects/Projects";
 
 const routes = [
   {
@@ -17,13 +18,13 @@ const routes = [
   {
     name: "about",
     path: "/about",
-    element: About,
+    element: Animations(About),
     desc: "a little about me",
   },
   {
     name: "projects",
     path: "/projects",
-    element: Home,
+    element: Animations(Projects),
     desc: "some of my projects",
   },
   {

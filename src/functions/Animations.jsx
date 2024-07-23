@@ -8,7 +8,7 @@ const Animations = (WrappedComponent) => {
       // Animate the video
       tml.from(
         ".bgVid",
-        { opacity: 0, duration: 0.6, ease: "circ.inOut" }
+        { opacity: 0, duration: 1, ease: "circ.inOut" }
       );
       // Animate the text il slide
       tml.fromTo(

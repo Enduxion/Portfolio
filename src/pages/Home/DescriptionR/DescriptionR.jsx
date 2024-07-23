@@ -30,8 +30,8 @@ const DescriptionR = () => {
       </span>
       <span className="il-rslide flex flex-col items-end text-sm">
         <Link className="text-primary-4 hover:text-primary-3 w-fit font-roboto">Pawan Gurung</Link>
-        <span className="text-primary-5 font-roboto">Copyright &copy; {new Date().getFullYear()}</span>
-        <span className="text-primary-4 font-roboto text-[12px]">Background Music: "Gypsy Time" by William King</span>
+        <span className="text-primary-5 font-roboto">Copyright &copy; {new Date().getFullYear()}. All rights reserved.</span>
+        <Link to="/credits" className="text-primary-4 hover:brightness-150 font-roboto text-[12px]">Credits</Link>
       </span>
     </div>
   );

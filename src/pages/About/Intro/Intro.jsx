@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Intro = () => {
   return (
     <div className="w-full h-1/2 flex flex-col justify-evenly">
-    <span className="font-bold text-lg">Who am I?</span>
-    <div className="">
+    <span className="font-bold text-lg il-slide">Who am I?</span>
+    <div className="il-slide">
       Hi, I'm Pawan Gurung, also known as Endux online. As a seasoned web developer and game developer based in Nepal, I specialize in creating dynamic websites and engaging games. My passion for mathematics drives my continuous learning and innovation in the tech field.
     </div>
     <div className="flex flex-row gap-4">
