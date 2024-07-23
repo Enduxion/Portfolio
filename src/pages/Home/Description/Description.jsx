@@ -35,12 +35,12 @@ const Description = ({ routes }) => {
           My CV
         </Link>
       </div>
-      <span className="flex flex-col w-fit">
+      <span className="flex flex-col">
         {routes.map((route, idx) => (
           <Link
             key={idx}
             to={route.path}
-            className="il-slide gap-1 flex items-baseline text-primary-4 hover:brightness-150 duration-75 transition-[filter_gap] hover:gap-2"
+            className="il-slide gap-1 flex items-baseline text-primary-4 hover:brightness-150 duration-75 transition-[filter_gap] hover:gap-2 w-fit"
           >
             <i className="fas fa-angle-right text-[10px] text-primary-4"></i>
             {route.name}

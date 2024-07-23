@@ -16,10 +16,10 @@ const DescriptionR = () => {
           </span>
         ))}
       </span>
-      <span className="flex flex-col">
+      <span className="flex flex-col items-end">
         <span className="il-rslide flex justify-end">My Projects</span>
         {projects.map((project, idx) => (
-          <Link to={project.path} key={idx} className="il-rslide text-primary-4 text-sm hover:brightness-150">
+          <Link to={project.path} key={idx} className="il-rslide w-fit text-primary-4 text-sm hover:brightness-150">
             {project.name}
           </Link>
         ))}
