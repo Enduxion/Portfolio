@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { socialArr } from "../../../resources/utils";
+import { socialArr } from "../../../resources/utils.js";
 
 const Description = ({ routes }) => {
   const myNameArr = "Pawan Gurung".split("");

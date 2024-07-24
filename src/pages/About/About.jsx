@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Helmet } from "react-helmet";
 
 import Transition from "../../functions/Transition";
-import { bga, bgAud, pfpImg } from "../../resources/utils";
+import { bga, bgAud, pfpImg } from "../../resources/utils.js";
 
 import Education from "./Education/Education";
 import Intro from "./Intro/Intro";

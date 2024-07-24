@@ -1,4 +1,4 @@
-import { bg } from "../../resources/utils";
+import { bg } from "../../resources/utils.js";
 
 import Description from "./Description/Description";
 import DescriptionR from "./DescriptionR/DescriptionR";

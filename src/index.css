@@ -30,10 +30,6 @@ body {
   @apply bg-primary-2 overflow-x-hidden;
 }
 
-.froboto > span {
-  @apply font-roboto;
-}
-
 .hidden-scrollbar::-webkit-scrollbar {
   @apply hidden;
 }
@@ -47,7 +43,7 @@ body {
   @apply bg-black w-1;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-white;
+  @apply bg-primary-4/70;
 }
 
 .section {

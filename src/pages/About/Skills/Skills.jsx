@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { skillsData } from "../../../resources/utils";
+import { skillsData } from "../../../resources/utils.js";
 
 const Skills = () => {
   return (
