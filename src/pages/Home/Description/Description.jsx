@@ -28,6 +28,7 @@ const Description = ({ routes }) => {
           Experienced Web Developer and Mathematics Enthusiast
         </span>
         <Link
+          target="_blank"
           to="/cv.pdf"
           className="il-slide bg-primary-2 text-primary-1 mt-2 px-3 gap-2 flex border-2 items-center justify-center py-1 rounded-md w-fit border-primary-1 hover:bg-primary-1/90 hover:text-primary-2 duration-100"
         >
@@ -53,6 +54,7 @@ const Description = ({ routes }) => {
         <span className="flex flex-row gap-4">
           {socialArr.map((social, idx) => (
             <Link
+              target="_blank"
               key={idx}
               to={social.link}
               className="il-slide flex gap-2 text-primary-4 w-fit items-center hover:brightness-150 duration-75 transition-[filter]"

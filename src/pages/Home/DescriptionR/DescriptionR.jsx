@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const DescriptionR = () => {
   const perks = ["Web developer", "Game developer"];
   const projects = [
-    { name: "Website for coding technology", path:"https://codingtech.netlify.app" },
+    { name: "Website for coding technology", path:"https://codingtechnology.netlify.app" },
     { name: "Chess using C++ & SFML", path:"https://www.github.com/Enduxion/Chess.git" },
   ];
   return (
@@ -19,7 +19,7 @@ const DescriptionR = () => {
       <span className="flex flex-col items-end">
         <span className="il-rslide flex justify-end">My Projects</span>
         {projects.map((project, idx) => (
-          <Link to={project.path} key={idx} className="il-rslide w-fit text-primary-4 text-sm hover:brightness-150">
+          <Link target="_blank" to={project.path} key={idx} className="il-rslide w-fit text-primary-4 text-sm hover:brightness-150">
             {project.name}
           </Link>
         ))}

@@ -9,6 +9,7 @@ const Intro = () => {
     </div>
     <div className="flex flex-row gap-4">
       <Link
+        target="_blank"
         to="/cv.pdf"
         className="il-slide bg-primary-2 text-primary-1 mt-2 px-3 gap-2 flex border-2 items-center justify-center py-1 rounded-md w-fit border-primary-1 hover:bg-primary-1/90 hover:text-primary-2 duration-100"
       >
@@ -16,6 +17,7 @@ const Intro = () => {
         My CV
       </Link>
       <Link
+        target="_blank"
         to="https://www.github.com/enduxion"
         className="il-slide bg-primary-2 text-primary-1 mt-2 px-3 gap-2 flex border-2 items-center justify-center py-1 rounded-md w-fit border-primary-1 hover:bg-primary-1/90 hover:text-primary-2 duration-100"
       >
