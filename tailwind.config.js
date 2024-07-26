@@ -32,6 +32,7 @@ export default {
       height: {
         nav: `${NAV_HEIGHT}rem`,
         anav: `calc(100vh - ${NAV_HEIGHT}rem)`,
+        "9/12": "calc(100% * 10 / 12)",
       },
       margin: {
         nav: `${NAV_HEIGHT}rem`,

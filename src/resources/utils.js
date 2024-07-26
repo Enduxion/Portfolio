@@ -58,20 +58,20 @@ const socialArr = [
 
 const projectArr = [
   {
-    name: "Coding Technology",
-    group: "Website",
-    link: "https://codingtechnology.netlify.app",
-    img: codingtechImg,
-    desc: "Developed for an educational institute offering IT training, specifically tailored for the MERN stack curriculum.",
-    tags: ["React", "Express", "MongoDB", "Node", "Framer Motion"]
-  },
-  {
     name: "Endux",
     group: "Website",
     link: "https://pawangrg.netlify.app",
     img: enduxImg,
     desc: "This is the current website you are viewing, serving as my personal portfolio.",
-    tags: ["React", "GSAP", "Framer Motion"]
+    tags: ["React", "GSAP", "Framer Motion"],
+  },
+  {
+    name: "Coding Technology",
+    group: "Website",
+    link: "https://codingtechnology.netlify.app",
+    img: codingtechImg,
+    desc: "Developed for an educational institute offering IT training, specifically tailored for the MERN stack curriculum.",
+    tags: ["React", "Express", "MongoDB", "Node", "Framer Motion"],
   },
   {
     name: "Chess",
@@ -79,7 +79,7 @@ const projectArr = [
     link: "https://www.github.com/Enduxion/Chess.git",
     img: chessImg,
     desc: "A game of chess developed in C++.",
-    tags: ["C++", "SFML"]
+    tags: ["C++", "SFML"],
   },
   {
     name: "Old Endux",
@@ -87,7 +87,7 @@ const projectArr = [
     link: "https://old-endux.netlify.app/html/index",
     img: oldEnduxImg,
     desc: "My previous portfolio website, containing additional information about me.",
-    tags: ["HTML", "CSS", "Javascript"]
+    tags: ["HTML", "CSS", "Javascript"],
   },
   {
     name: "VVS School",
@@ -95,8 +95,8 @@ const projectArr = [
     link: "https://vinvas.netlify.app",
     img: vinvasImg,
     desc: "A website for Vindhyavasini Secondary School, featuring detailed information about the institution.",
-    tags: ["HTML", "CSS", "Javascript", "React"]
-  }
+    tags: ["HTML", "CSS", "Javascript", "React"],
+  },
 ];
 
 export { bg, bga, bgp, bgAud, pfpImg, skillsData, socialArr, projectArr };
