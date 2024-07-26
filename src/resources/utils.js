@@ -2,6 +2,7 @@
 import bga from "../assets/videos/bga.mp4";
 import bgp from "../assets/videos/bgp.mp4";
 import bg from "../assets/videos/bg.mp4";
+import bgc from "../assets/videos/bgc.mp4";
 // Audio
 import bgAud from "../assets/audio/bga.mp3";
 // Images
@@ -99,4 +100,48 @@ const projectArr = [
   },
 ];
 
-export { bg, bga, bgp, bgAud, pfpImg, skillsData, socialArr, projectArr };
+const contactArr = [
+  {
+    name: "Email",
+    icon: "fas fa-envelope",
+    link: "mailto:pg.pawangurung@gmail.com",
+  },
+  {
+    name: "Facebook",
+    icon: "fab fa-facebook",
+    link: "https://www.facebook.com/enduxion/",
+  },
+  {
+    name: "Instagram",
+    icon: "fab fa-instagram",
+    link: "https://www.instagram.com/enduxion/",
+  },
+  {
+    name: "LinkedIn",
+    icon: "fab fa-linkedin",
+    link: "https://www.linkedin.com/in/pawan-gurung/",
+  },
+  {
+    name: "Github",
+    icon: "fab fa-github",
+    link: "https://www.github.com/Enduxion/",
+  },
+  {
+    name: "Chess",
+    icon: "fas fa-chess",
+    link: "https://www.chess.com/member/enduxion",
+  }
+];
+
+export {
+  bg,
+  bga,
+  bgp,
+  bgc,
+  bgAud,
+  pfpImg,
+  skillsData,
+  socialArr,
+  projectArr,
+  contactArr,
+};

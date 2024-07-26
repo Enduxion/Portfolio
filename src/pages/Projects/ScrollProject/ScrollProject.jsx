@@ -30,7 +30,7 @@ const ScrollProject = ({ projectArr, currentProject, setCurrentProject }) => {
         <div className="flex flex-col h-full justify-center items-center w-1/12 gap-4">
           {Array.from(Array(projectArr.length).keys()).map((_, index) => (
             <i
-              className={`${index === currentProject.id ? "fas fa-star text-primary-3" : "far fa-circle text-primary-4"} duration-150 cursor-pointer text-inherit text-[10px]`}
+              className={`${index === currentProject.id ? "fas fa-star text-primary-3" : "far fa-circle text-primary-4"} duration-150 cursor-pointer text-inherit text-[10px] il-slide`}
               key={index}
               onClick={() =>
                 setCurrentProject({ id: index, ...projectArr[index] })

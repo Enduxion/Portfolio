@@ -21,7 +21,7 @@ const Home = ({ routes }) => {
       >
         <source src={bg} type="video/mp4" />
       </video>
-      <Description routes={routes} slide/>
+      <Description routes={routes} />
       <DescriptionR />
     </div>
   );
