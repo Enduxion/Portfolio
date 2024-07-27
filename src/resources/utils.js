@@ -127,9 +127,34 @@ const contactArr = [
     link: "https://www.github.com/Enduxion/",
   },
   {
+    name: "Reddit",
+    icon: "fab fa-reddit",
+    link: "https://www.reddit.com/user/pawan-gurung",
+  },
+  {
+    name: "Whatsapp",
+    icon: "fab fa-whatsapp",
+    link: "https://wa.me/9779708185193",
+  },
+  {
     name: "Chess",
     icon: "fas fa-chess",
     link: "https://www.chess.com/member/enduxion",
+  },
+  {
+    name: "Casual Email",
+    icon: "fas fa-envelope",
+    link: "mailto:endux.pg@gmail.com",
+  },
+  {
+    name: "Phone",
+    icon: "fas fa-phone",
+    link: "tel:+9779708185193",
+  },
+  {
+    name: "Discord",
+    icon: "fab fa-discord",
+    link: "https://discordapp.com/users/1266496086953169011",
   }
 ];
 
