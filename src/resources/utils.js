@@ -158,6 +158,25 @@ const contactArr = [
   }
 ];
 
+const visitArr = [
+  {
+    name: "Home",
+    to: "/"
+  },
+  {
+    name: "About",
+    to: "/about",
+  },
+  {
+    name: "Projects",
+    to: "/projects"
+  },
+  {
+    name: "Github",
+    to: "https://www.github.com/Enduxion/",
+  }
+]
+
 export {
   bg,
   bga,
@@ -169,4 +188,5 @@ export {
   socialArr,
   projectArr,
   contactArr,
+  visitArr
 };

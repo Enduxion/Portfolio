@@ -11,7 +11,7 @@ const Skills = () => {
             target="_blank"
             to={skill.to}
             key={index}
-            className="il-rslide bg-primary-2 text-primary-1 mt-2 px-3 gap-2 flex border-2 items-center justify-center py-1 rounded-md w-fit border-primary-1 hover:bg-primary-1/90 hover:text-primary-2 duration-100"
+            className="il-rslide mt-2 button"
           >
             <i className={`${skill.icon} text-inherit text-sm`}></i>
             {skill.name}

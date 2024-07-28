@@ -1,5 +1,9 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { AnimatePresence } from "framer-motion";
+import Popup from "../Popup/Popup";
+import validateForm from "../../../functions/validateForm";
+import Tooltip from "../../../components/Tooltip/Tooltip";
 
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
@@ -11,19 +15,51 @@ const Direct = () => {
     Email: "",
   });
   const [message, setMessage] = useState("");
+  const [popUp, setPopUp] = useState({ show: false, message: "", title: "" });
+  const [err, setErr] = useState({ msg: "", rId: 0 });
 
   const handleDataChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    // Send data to email
-    emailjs.send(serviceId, templateId, { ...userData, message }, {
-      publicKey: publicId
-    });
+  const sendMsg = () => {
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        { ...userData, message },
+        {
+          publicKey: publicId,
+        }
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          setPopUp({
+            show: true,
+            message:
+              "You message was successfully sent to me and I will get back to you shortly.",
+            title: "Message sent successfully",
+          });
+        }
+      })
+      .catch((error) => {
+        setPopUp({
+          show: true,
+          message: "Something went wrong. Please try again later.",
+          title: "Error sending message",
+        });
+      });
+  };
 
-    setUserData({ Name: "", Email: "" });
-    setMessage("");
+  const handleSubmit = () => {
+    let isValid = validateForm(userData.Name, userData.Email, message);
+    if (isValid.validity) {
+      sendMsg();
+      setUserData({ Name: "", Email: "" });
+      setMessage("");
+    } else {
+      setErr({ msg: isValid.errorMsg, rId: Math.random() })
+    }
   };
 
   return (
@@ -39,7 +75,7 @@ const Direct = () => {
           <input
             name={data}
             key={index}
-            type="text"
+            type={index === 0 ? "text" : "email"}
             placeholder={data}
             value={userData[data]}
             onChange={(e) => handleDataChange(e)}
@@ -58,8 +94,33 @@ const Direct = () => {
         <span
           onClick={() => handleSubmit()}
           className="text-primary-2 cursor-pointer font-bold hover:text-primary-1 hover:bg-transparent border-2 border-primary-1 w-fit bg-primary-1 px-3 py-1 rounded-md duration-100 il-slide"
-        >Submit</span>
+        >
+          Submit
+        </span>
       </div>
+      <AnimatePresence>
+        {popUp.show && (
+          <Popup
+            message={popUp.message}
+            title={popUp.title}
+            setPopUp={() => setPopUp({ show: false, message: "", title: "" })}
+          />
+        )}
+      </AnimatePresence>
+      {err.msg !== "" && (
+        <Tooltip
+          duration={3000}
+          position={{ x: 1, y: 1 }}
+          key={err.rId}
+          className="text-primary-6 bg-primary-1 mb-2 mr-2 flex flex-col rounded-md"
+        >
+          <span className="text-inherit font-bold px-4 py-3 flex flex-row gap-2 items-baseline">
+            <i className="fa fa-exclamation-triangle text-inherit"></i>
+            {err.msg}
+          </span>
+          <span className="w-full h-1 bg-primary-6 rounded-b-md"></span>
+        </Tooltip>
+      )}
     </div>
   );
 };

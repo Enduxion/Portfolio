@@ -11,7 +11,7 @@ const OtherContact = ({ contacts }) => {
           to={contact.link}
           target="_blank"
           key={index}
-          className="il-rslide bg-transparent text-primary-1 px-3 border-2 py-1 rounded-md w-fit flex justify-center items-center gap-2 border-primary-1 hover:bg-primary-1 hover:text-black duration-100"
+          className="il-rslide button"
         >
           <i className={`${contact.icon} text-inherit`}></i>
           {contact.name}
