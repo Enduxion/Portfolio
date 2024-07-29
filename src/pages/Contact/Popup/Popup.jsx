@@ -25,7 +25,7 @@ const Popup = ({ message, title, setPopUp }) => {
             ))
           }
         </div>
-        <span className="button" onClick={() => setPopUp()}>Close</span>
+        <span className="button" onClick={() => setPopUp(false)}>Close</span>
       </div>
     </motion.div>
   );
