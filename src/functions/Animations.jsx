@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 
 const Animations = (WrappedComponent) => {
   return ((props) => {
+    gsap.config({ nullTargetWarn: false });
     const tml = gsap.timeline({});
     useGSAP(() => {
       // Animate the video

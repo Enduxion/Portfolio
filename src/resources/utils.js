@@ -41,9 +41,9 @@ const socialArr = [
     icon: "fab fa-github",
   },
   {
-    name: "Instagsram",
-    link: "https://www.instagsram.com/enduxion/",
-    icon: "fab fa-instagsram",
+    name: "Instagram",
+    link: "https://www.instagram.com/enduxion/",
+    icon: "fab fa-instagram",
   },
   {
     name: "Facebook",

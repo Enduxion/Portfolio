@@ -37,6 +37,15 @@ export default {
       margin: {
         nav: `${NAV_HEIGHT}rem`,
       },
+      screens: {
+        'sm': '320px',
+        'md': '640px',
+        'lg': '768px',
+        'xl': '1024px',
+      },
+      size: {
+        'xs': '12px',
+      },
     },
   },
   plugins: [],

@@ -4,23 +4,15 @@ import Description from "./Description/Description";
 import DescriptionR from "./DescriptionR/DescriptionR";
 import Transition from "../../functions/Transition";
 import { Helmet } from "react-helmet";
+import VideoComponent from "../../components/VideoComponent/VIdeoComponent.jsx";
 
 const Home = ({ routes }) => {
   return (
-    <div className="py-8 section overflow-hidden flex flex-row">
+    <div className="py-8 section lg:overflow-hidden flex lg:flex-row sm:flex-col sm:overflow-auto">
       <Helmet>
         <title>Endux | Home</title>
       </Helmet>
-      <video
-        className="w-full h-screen object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10 opacity-40"
-        id="bgVid"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={bg} type="video/mp4" />
-      </video>
+      <VideoComponent src={bg} />
       <Description routes={routes} />
       <DescriptionR />
     </div>
