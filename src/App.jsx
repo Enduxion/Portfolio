@@ -8,6 +8,8 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+import { useState } from "react";
+import Loader from "./components/Loader/Loader";
 
 const routes = [
   {
@@ -37,22 +39,29 @@ const routes = [
 ];
 
 const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
   return (
     <>
-      <Navbar routes={routes} />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          {routes.map((route) => (
-            <Route
-              index={route.path === "/"}
-              path={route.path}
-              element={<route.element routes={routes} />}
-              key={route.path}
-            />
-          ))}
-        </Routes>
-      </AnimatePresence>
+      {!isLoaded ? (
+        <Loader setIsLoaded={setIsLoaded} />
+      ) : (
+        <>
+          <Navbar routes={routes} />
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              {routes.map((route) => (
+                <Route
+                  index={route.path === "/"}
+                  path={route.path}
+                  element={<route.element routes={routes} />}
+                  key={route.path}
+                />
+              ))}
+            </Routes>
+          </AnimatePresence>
+        </>
+      )}
     </>
   );
 };

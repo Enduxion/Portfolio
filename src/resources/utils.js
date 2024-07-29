@@ -1,7 +1,7 @@
 // Video
+import bg from "../assets/videos/bg.mp4";
 import bga from "../assets/videos/bga.mp4";
 import bgp from "../assets/videos/bgp.mp4";
-import bg from "../assets/videos/bg.mp4";
 import bgc from "../assets/videos/bgc.mp4";
 // Audio
 import bgAud from "../assets/audio/bga.mp3";
