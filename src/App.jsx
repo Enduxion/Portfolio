@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Animations from "./functions/Animations";
+import Loader from "./functions/Loader";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
-import { useState } from "react";
-import Loader from "./components/Loader/Loader";
 
 const routes = [
   {
@@ -44,7 +44,7 @@ const App = () => {
   return (
     <>
       {!isLoaded ? (
-        <Loader setIsLoaded={setIsLoaded} />
+        <Loader key="loader" setIsLoaded={setIsLoaded} />
       ) : (
         <>
           <Navbar routes={routes} />

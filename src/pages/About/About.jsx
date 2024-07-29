@@ -1,15 +1,14 @@
 import { useRef } from "react";
 import { Helmet } from "react-helmet";
 
-import Transition from "../../functions/Transition";
 import { bga, bgAud, pfpImg } from "../../resources/utils.js";
+import Transition from "../../functions/Transition";
 
 import Education from "./Education/Education";
 import Intro from "./Intro/Intro";
 import Skills from "./Skills/Skills";
 import Contact from "./Contact/Contact";
 import Attribution from "./Attribution/Attribution";
-import AsyncImage from "../../functions/AsyncImg";
 
 const About = () => {
   const musicRef = useRef(null);
@@ -41,7 +40,7 @@ const About = () => {
       <div className="w-1/2 h-full flex flex-col text-right gap-4">
         <div className="w-full h-1/3 flex items-center justify-end il-rslide">
           <Attribution musicRef={musicRef} />
-          <AsyncImage
+          <img
             className="h-full rounded-2xl w-fit border-2 border-gray-800 saturate-0 hover:saturate-100 cursor-pointer hover:scale-105 duration-100"
             src={pfpImg}
             draggable="false"

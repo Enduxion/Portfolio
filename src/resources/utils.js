@@ -177,6 +177,8 @@ const visitArr = [
   }
 ]
 
+const loaderArr = [bg, bga, bgp, bgc, bgAud, pfpImg, codingtechImg, enduxImg, chessImg, oldEnduxImg, vinvasImg];
+
 export {
   bg,
   bga,
@@ -188,5 +190,6 @@ export {
   socialArr,
   projectArr,
   contactArr,
-  visitArr
+  visitArr,
+  loaderArr,
 };
