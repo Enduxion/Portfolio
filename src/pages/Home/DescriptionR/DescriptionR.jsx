@@ -4,6 +4,7 @@ import Projects from "./Projects/Projects";
 import Social from "../Description/Social/Social";
 
 const DescriptionR = () => {
+  const isSmallDevice = window.innerWidth < 768;
   return (
     <div className="flex flex-col justify-between lg:items-end lg:text-right h-full lg:w-1/2 sm:w-full lg:gap-0 sm:gap-16 lg:mt-0 sm:mt-16">
       <Skills />
@@ -17,7 +18,7 @@ const DescriptionR = () => {
         </span>
       </span>
       <div className="sm:block lg:hidden">
-        <Social />
+        <Social animated={isSmallDevice} />
       </div>
       <Credits />
     </div>

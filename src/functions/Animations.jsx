@@ -15,13 +15,13 @@ const Animations = (WrappedComponent) => {
       tml.fromTo(
         ".il-slide",
         { x: "-100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 0.3, ease: "circ.inOut", stagger: 0.2 }
+        { x: "0%", opacity: 1, duration: 0.1, ease: "circ.inOut", stagger: 0.2 }
       );
       // Animate the text il slide right
       tml.fromTo(
         ".il-rslide",
         { x: "100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 0.3, ease: "circ.inOut", stagger: 0.2 }
+        { x: "0%", opacity: 1, duration: 0.1, ease: "circ.inOut", stagger: 0.2 }
       );
     }, []);
     return <WrappedComponent {...props} />
