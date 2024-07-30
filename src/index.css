@@ -42,13 +42,9 @@ body {
 ::-webkit-scrollbar {
   @apply bg-black w-1;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply bg-primary-4/70;
-}
-
-.hex {
-  clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 81%, 80% 100%, 20% 100%, 0 80%, 0 20%);
-  -webkit-clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 81%, 80% 100%, 20% 100%, 0 80%, 0 20%);
 }
 
 .section {

@@ -12,7 +12,7 @@ import pfpImg from "../assets/images/pfp.png";
 
 import codingtechImg from "../assets/images/codingtech.png";
 import enduxImg from "../assets/images/endux.png";
-import chessImg from "../assets/images/chess.jpg";
+import chessImg from "../assets/images/chess.png";
 import oldEnduxImg from "../assets/images/oldEndux.png";
 import vinvasImg from "../assets/images/vinvas.png";
 
@@ -61,7 +61,7 @@ const projectArr = [
   {
     name: "Endux",
     group: "Website",
-    link: "https://pawangrg.netlify.app",
+    link: "https://pawangrg.com.np",
     img: enduxImg,
     desc: "This is the current website you are viewing, serving as my personal portfolio.",
     tags: ["React", "GSAP", "Framer Motion"],
@@ -79,7 +79,7 @@ const projectArr = [
     group: "Game",
     link: "https://www.github.com/Enduxion/Chess.git",
     img: chessImg,
-    desc: "A game of chess developed in C++.",
+    desc: "A game of chess developed in C++ developed with the SFML library.",
     tags: ["C++", "SFML"],
   },
   {

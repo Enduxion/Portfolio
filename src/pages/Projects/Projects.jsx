@@ -7,6 +7,7 @@ import Intro from "./Intro/Intro";
 import ScrollProject from "./ScrollProject/ScrollProject";
 import ProjectDesc from "./ProjectDesc/ProjectDesc";
 import ProjectImg from "./ProjectImg/ProjectImg";
+import VideoComponent from "../../components/VideoComponent/VIdeoComponent";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState({
@@ -14,27 +15,18 @@ const Projects = () => {
     ...projectArr[0],
   });
   return (
-    <div className="section flex flex-row gap-8 py-8">
-      <video
-        className="w-full h-screen object-cover select-none absolute left-1/2 -translate-x-1/2 top-0 bgVid -z-10 opacity-40"
-        id="bgVid"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={bgp} type="video/mp4" />
-      </video>
-      <div className="w-1/2 flex flex-col h-full">
+    <div className="mt-nav sm:h-auto lg:h-anav px-4 tracking-widest flex lg:flex-row sm:flex-col gap-8 py-8">
+      <VideoComponent src={bgp} />
+      <div className="lg:w-1/2 sm:w-full flex flex-col sm:gap-8 lg:gap-0 lg:h-full sm:h-auto lg:justify-between">
         <Intro />
         <ScrollProject projectArr={projectArr} currentProject={currentProject} setCurrentProject={setCurrentProject} />
       </div>
       <motion.div
-        className="w-1/2 flex flex-col h-full items-end"
+        className="lg:w-1/2 sm:w-full lg:flex flex-col sm:h-auto lg:h-full lg:items-end sm:items-start lg:gap-0 sm:gap-4 sm:min-h-fit lg:min-h-max sm:hidden"
         key={currentProject.id}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ opacity: { duration: 0.6 } }}
+        transition={{ opacity: { duration: 0 } }}
       >
         <ProjectDesc currentProject={currentProject} />
         <ProjectImg currentProject={currentProject} />

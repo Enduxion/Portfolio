@@ -14,7 +14,7 @@ const Menu = ({ routes, setOpenMenu }) => {
       initial={{ borderRadius: "50%", x: "100%" }}
       animate={{ borderRadius: ["50%", "50%", "25%", 0], x: 0 }}
       exit={{ borderRadius: "50%", x: "100%" }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className="w-full flex justify-end">
         <motion.span className="fa fa-close text-lg" onClick={() => setOpenMenu(false)} whileTap={{ scale: 0.75 }} />

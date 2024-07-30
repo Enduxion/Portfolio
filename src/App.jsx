@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+import ProjectId from "./pages/ProjectId/ProjectId";
 
 const routes = [
   {
@@ -58,6 +59,7 @@ const App = () => {
                   key={route.path}
                 />
               ))}
+              <Route path="/projects/:id" element={<ProjectId />} />
             </Routes>
           </AnimatePresence>
         </>

@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div className="w-full h-1/2 flex flex-col justify-evenly lg:gap-0 sm:gap-2">
       <span className="font-bold text-lg il-slide">Who am I?</span>
-      <div className="il-slide sm:text-sm md:text-base">
+      <div className="il-slide sm:text-sm md:text-base sm:text-justify md:text-left">
         Hi, I'm Pawan Gurung, also known as Endux online. As a seasoned web
         developer and game developer based in Nepal, I specialize in creating
         dynamic websites and engaging games. My passion for mathematics drives
