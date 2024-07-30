@@ -10,7 +10,7 @@ const Menu = ({ routes, setOpenMenu }) => {
   }]
   return (
     <motion.div
-      className="fixed top-0 right-0 flex flex-col w-full h-screen bg-primary-2 border-l-primary-4/75 tracking-widest border-l-2 p-4 overflow-hidden z-50"
+      className="fixed top-0 right-0 flex flex-col w-full h-screen bg-primary-2 bg-opacity-70 border-l-primary-4/75 tracking-widest border-l-2 p-4 overflow-hidden z-50"
       initial={{ borderRadius: "50%", x: "100%" }}
       animate={{ borderRadius: ["50%", "50%", "25%", 0], x: 0 }}
       exit={{ borderRadius: "50%", x: "100%" }}

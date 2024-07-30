@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Contact = () => {
   return (
-    <div className="w-full h-1/3 flex flex-col justify-center items-end">
+    <div className="w-full h-1/3 flex flex-col justify-center lg:items-end sm:items-start">
       <span className="font-bold text-lg il-rslide">Get in Touch</span>
       <div className="il-rslide">Have questions? Reach out to me here!</div>
       <Link

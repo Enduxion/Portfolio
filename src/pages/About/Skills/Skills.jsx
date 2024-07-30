@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <div className="w-full h-1/3 flex justify-center flex-col">
       <span className="font-bold text-lg il-rslide">My Technical Skills</span>
-      <div className="flex flex-row flex-wrap gap-2 justify-end">
+      <div className="flex flex-row flex-wrap gap-2 lg:justify-end sm:justify-start">
         {skillsData.map((skill, index) => (
           <Link
             target="_blank"

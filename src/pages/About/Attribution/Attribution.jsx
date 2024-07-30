@@ -26,7 +26,7 @@ const Attribution = ({ musicRef }) => {
       dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
       drag
     >
-      <div className="w-1/2 bg-gradient-to-tr from-gray-700/20 to-gray-500/20 p-4 rounded-xl backdrop-blur-md flex flex-col items-center gap-4">
+      <div className="lg:w-1/2 sm:w-4/5 bg-gradient-to-tr from-gray-700/20 to-gray-500/20 p-4 rounded-xl backdrop-blur-md flex flex-col items-center gap-4">
         <marquee className="text-sm w-full font-bold" scrollamount="6">
           <i className="fas fa-music text-[10px]"></i>{" "}
           "Gypsy time" by{" "}
