@@ -1,10 +1,26 @@
 import { useParams } from "react-router-dom";
 import { projectArr } from "../../resources/utils";
 import Transition from "../../functions/Transition";
+import twc from "../../functions/twc";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 const ProjectId = () => {
   const { id } = useParams();
+  const projectRefs = useRef([]);
+
+  const [pid, setPid] = useState(projectArr.findIndex((project) => project.name.toLowerCase() === id.toLowerCase()));
+
+  useEffect(() => {
+    setPid(projectArr.findIndex((project) => project.name.toLowerCase() === id.toLowerCase()));
+  }, [id]);
+
+  useEffect(() => {
+    if (pid !== -1 && projectRefs.current[pid]) {
+      projectRefs.current[pid].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+  }, [pid]);
 
   return (
     <div className="section py-8 flex flex-col">
@@ -16,8 +32,34 @@ const ProjectId = () => {
       </div>
       <div className="hidden-scrollbar flex flex-row overflow-x-scroll grow items-center gap-4">
         {projectArr.map((project, index) => (
-          <ProjectCard project={project} key={index} isCurrentlySelected={project.name.toLowerCase() === id.toLowerCase()} />
+          <ProjectCard
+            ref={(el) => (projectRefs.current[index] = el)}
+            setPid={() => setPid(index)}
+            project={project}
+            key={index}
+            isCurrentlySelected={index === pid}
+          />
         ))}
+      </div>
+      <div className="flex w-full items-center justify-center gap-4">
+        {Array.from(Array(projectArr.length).keys()).map((_, index) => {
+          let isCurrent = false;
+          if (index === pid) {
+            isCurrent = true;
+          }
+          return (
+            <motion.span
+              onClick={() => setPid(index)}
+              animate={{
+                borderColor: isCurrent ? twc.colors.gold : twc.colors.gray,
+                backgroundColor: isCurrent ? twc.colors.gold : 'transparent',
+                width: isCurrent ? '1.75rem' : '0.75rem',
+              }}
+              className={`w-3 rounded-full h-3 border-2 cursor-pointer hover:border-4 duration-150`}
+              key={index}
+            />
+          );
+        })}
       </div>
     </div>
   );
