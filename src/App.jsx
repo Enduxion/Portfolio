@@ -11,6 +11,7 @@ import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import ProjectId from "./pages/ProjectId/ProjectId";
+import NotFound from "./pages/NotFound/NotFound";
 
 const routes = [
   {
@@ -60,6 +61,7 @@ const App = () => {
                 />
               ))}
               <Route path="/projects/:id" element={<ProjectId />} />
+              <Route path="/*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
         </>

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Menu = ({ routes, setOpenMenu }) => {
   const new_routes = [...routes, {
     name: "Github",
-    to: "https://github.com/Enduxion",
+    path: "https://github.com/Enduxion",
   }, {
     name: "CV",
-    to: "/cv.pdf",
+    path: "/cv.pdf",
   }]
   return (
     <motion.div
