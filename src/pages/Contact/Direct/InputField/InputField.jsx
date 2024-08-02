@@ -3,7 +3,7 @@ import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 const InputField = ({ err, touched, as, name, placeholder }) => {
   let classes =
-    "w-3/5 border-b-2 py-1 rounded-sm bg-transparent outline-none hover:border-primary-4 focus:border-primary-3 hover:placeholder:text-primary-1/90 placeholder:text-primary-4 il-slide";
+    "lg:w-3/5 sm:w-full border-b-2 py-1 rounded-sm bg-transparent outline-none hover:border-primary-4 focus:border-primary-3 hover:placeholder:text-primary-1/90 placeholder:text-primary-4 il-slide";
 
   if (as === "input") classes += " indent-2";
   else classes += " indent-1 resize-none";

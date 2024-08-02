@@ -13,7 +13,7 @@ const Direct = () => {
   });
 
   return (
-    <div className="w-3/5 flex flex-col">
+    <div className="lg:w-3/5 sm:w-full flex flex-col">
       <span className="font-bold text-xl il-slide">Get in touch</span>
       <span className="text-sm text-primary-4 w-full il-slide">
         Note: If you want to contact due to an urgent/important matter, please

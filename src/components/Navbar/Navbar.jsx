@@ -46,7 +46,7 @@ const Navbar = ({ routes }) => {
       <motion.span
         className="fa fa-bars lg:hidden sm:block text-lg"
         onClick={() => setOpenMenu(true)}
-        whileTap={{ scale: 0.75 }}
+        whileTap={{ y: -10 }}
       />
       <AnimatePresence>
         {
