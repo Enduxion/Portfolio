@@ -33,7 +33,7 @@ const Direct = () => {
             setShowPopup({
               title: "Message sent successfully",
               message:
-                "I have recieved your message, and I'll get back to you shortly after.",
+                "I have received your message, and I'll get back to you shortly after.",
               show: true,
             });
           } else {

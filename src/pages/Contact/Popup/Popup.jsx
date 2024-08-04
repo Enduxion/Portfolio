@@ -11,10 +11,10 @@ const Popup = ({ message, title, setPopUp }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0}}
     >
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-2 text-primary-1 p-4 w-1/2 h-1/2 flex justify-between flex-col border-2 border-primary-4">
-        <span className="w-full flex justify-center text-2xl font-roboto">{title}</span>
-        <div className="w-full flex justify-center text-primary-4 my-2">{message}</div>
-        <div className="flex flex-col">
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-2 text-primary-1 p-4 lg:w-1/2 sm:w-5/6 lg:h-1/2 sm:h-3/5 flex justify-between flex-col border-2 border-primary-4">
+        <span className="w-full flex justify-center lg:text-left sm:text-center text-2xl font-roboto">{title}</span>
+        <div className="w-full flex justify-center lg:text-left sm:text-center text-primary-4 my-2">{message}</div>
+        <div className="flex flex-col lg:items-start sm:items-center">
           <span className="">Till then, visit other pages</span>
           {
             visitArr.map((visit, index) => (
@@ -25,7 +25,7 @@ const Popup = ({ message, title, setPopUp }) => {
             ))
           }
         </div>
-        <span className="button" onClick={() => setPopUp(false)}>Close</span>
+        <span className="button sm:self-center lg:self-start" onClick={() => setPopUp(false)}>Close</span>
       </div>
     </motion.div>
   );
