@@ -5,7 +5,7 @@ const ProjectCard = forwardRef(({ project, setPid, isCurrentlySelected }, ref) =
   return (
     <div
       ref={ref}
-      className={`lg:w-1/3 sm:w-10/12 flex flex-col shrink-0 h-fit bg-gradient-to-tr from-primary-2/70 to-primary-2/90 p-4 rounded-3xl backdrop-blur-md gap-2 cursor-pointer border-2 ${isCurrentlySelected ? "border-primary-3/50" : "border-primary-4/20"}`}
+      className={`lg:w-1/3 sm:w-10/12 flex flex-col shrink-0 h-fit bg-gradient-to-br from-primary-2/80 to-primary-2/90 p-4 rounded-3xl gap-2 cursor-pointer border-2 ${isCurrentlySelected ? "border-primary-3/50" : "border-primary-4/20"}`}
       id={project.name}
       onClick={setPid}
     >

@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
-import { bga, projectArr } from "../../resources/utils";
-import Transition from "../../functions/Transition";
-import twc from "../../functions/twc";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { bga, projectArr } from "../../resources/utils";
+import twc from "../../functions/twc";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import VideoComponent from "../../components/VideoComponent/VIdeoComponent";
+import Transition from "../../functions/Transition";
 
 const ProjectId = () => {
   const { id } = useParams();

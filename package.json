@@ -13,7 +13,6 @@
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
     "autoprefixer": "^10.4.19",
-    "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
     "framer-motion": "^11.3.8",
